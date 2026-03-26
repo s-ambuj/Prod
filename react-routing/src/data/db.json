@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "product": "Laptop",
+      "price": 1000,
+      "category": "Electronics"
+    },
+    {
+      "id": 2,
+      "product": "Smartphone",
+      "price": 500,
+      "category": "Electronics"
+    },
+    {
+      "id": 3,
+      "product": "Table",
+      "price": 200,
+      "category": "Furniture"
+    },
+    {
+      "id": 4,
+      "product": "Chair",
+      "price": 100,
+      "category": "Furniture"
+    },
+    {
+      "id": 5,
+      "product": "Headphones",
+      "price": 150,
+      "category": "Electronics"
+    },
+    {
+      "product": "TV",
+      "price": 40000,
+      "category": "Electronics",
+      "id": 6
+    },
+    {
+      "product": "WaterBottle",
+      "price": 1500,
+      "category": "Essential",
+      "id": 7
+    }
+  ]
+}
