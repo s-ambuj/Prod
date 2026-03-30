@@ -11,12 +11,15 @@ app = FastAPI(
 )
 
 register_exception_handlers(app)
+
+origins = [origin.strip() for origin in settings.ALLOWED_ORIGINS.split(",")]
+
 app.add_middleware(LoggingMiddleware)
 app.add_middleware(AuditMiddleware)
 app.add_middleware(RateLimiterMiddleware, max_requests=100, window_seconds=60)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

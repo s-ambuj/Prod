@@ -44,18 +44,29 @@ class DoctorService:
             )
 
         profile = await self.doctor_repo.get_by_user_id(user_id)
+        
+        # Return default profile data if profile doesn't exist yet
         if not profile:
-            raise HTTPException(
-                status_code=status.HTTP_404_NOT_FOUND,
-                detail="Doctor profile not found"
-            )
+            return {
+                "id": None,
+                "user_id": user_id,
+                "name": user["name"],
+                "email": user["email"],
+                "specialization": "General Medicine",
+                "experience": 0,
+                "availability": [],
+                "rating": 0.0,
+                "total_reviews": 0,
+                "bio": None,
+                "is_approved": user.get("is_approved", False)
+            }
 
         return {
             "id": str(profile["_id"]),
             "user_id": profile["user_id"],
             "name": user["name"],
             "email": user["email"],
-            "specialization": profile.get("specialization", ""),
+            "specialization": profile.get("specialization", "General Medicine"),
             "experience": profile.get("experience", 0),
             "availability": profile.get("availability", []),
             "rating": profile.get("rating", 0.0),
