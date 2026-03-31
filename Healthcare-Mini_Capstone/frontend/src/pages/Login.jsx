@@ -35,7 +35,7 @@ const Login = () => {
   return (
     <div className="min-h-screen flex">
       {/* Left Side - Branding */}
-      <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-blue-600 via-indigo-600 to-violet-700 relative overflow-hidden">
+      <div className="hidden lg:flex lg:w-1/2 bg-linear-to-br from-blue-600 via-indigo-600 to-violet-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-black/10" />
         
         {/* Animated Background Shapes */}
@@ -94,7 +94,7 @@ const Login = () => {
       </div>
 
       {/* Right Side - Login Form */}
-      <div className="flex-1 flex items-center justify-center p-8 bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/30">
+      <div className="flex-1 flex items-center justify-center p-8 bg-linear-to-br from-slate-50 via-blue-50/30 to-indigo-50/30">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -103,7 +103,7 @@ const Login = () => {
         >
           {/* Mobile Logo */}
           <div className="lg:hidden flex items-center justify-center gap-3 mb-8">
-            <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
+            <div className="w-12 h-12 bg-linear-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
               <Stethoscope className="w-6 h-6 text-white" />
             </div>
             <span className="text-2xl font-bold gradient-text">HealthCare</span>
@@ -155,7 +155,7 @@ const Login = () => {
                 whileTap={{ scale: 0.99 }}
                 type="submit"
                 disabled={isLoading}
-                className="w-full btn-primary py-4 text-lg disabled:opacity-50"
+                className="w-full btn-primary py-4 text-lg cursor-pointer disabled:opacity-50"
               >
                 {isLoading ? (
                   <span className="flex items-center justify-center gap-2">

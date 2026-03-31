@@ -57,7 +57,7 @@ const PatientDashboard = () => {
   const completedAppointments = appointments.filter(a => a.status === 'completed');
 
   const stats = [
-    { label: 'Upcoming', value: upcomingAppointments.length, icon: Calendar, color: 'blue', trend: '+2 this week' },
+    { label: 'Upcoming', value: upcomingAppointments.length, icon: Calendar, color: 'blue', trend: 'this week' },
     { label: 'Completed', value: completedAppointments.length, icon: CheckCircle, color: 'green', trend: 'Total visits' },
     { label: 'Prescriptions', value: prescriptions.length, icon: FileText, color: 'purple', trend: 'Active meds' },
   ];
