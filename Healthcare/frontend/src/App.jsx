@@ -18,7 +18,7 @@ const PrivateRoute = ({ children, allowedRoles }) => {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/30">
+      <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-slate-50 via-blue-50/30 to-indigo-50/30">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
       </div>
     );
@@ -118,6 +118,22 @@ const App = () => {
             element={
               <PrivateRoute allowedRoles={['admin']}>
                 <AdminDashboard />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/admin/users"
+            element={
+              <PrivateRoute allowedRoles={['admin']}>
+                <Navigate to="/admin?tab=users" replace />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/admin/pending"
+            element={
+              <PrivateRoute allowedRoles={['admin']}>
+                <Navigate to="/admin?tab=pending" replace />
               </PrivateRoute>
             }
           />

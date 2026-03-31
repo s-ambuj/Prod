@@ -42,9 +42,24 @@ const Layout = ({ children }) => {
         ];
       case 'admin':
         return [
-          { icon: Home, label: 'Dashboard', path: '/admin' },
-          { icon: Users, label: 'Users', path: '/admin' },
-          { icon: User, label: 'Pending Doctors', path: '/admin' },
+          {
+            icon: Home,
+            label: 'Dashboard',
+            path: '/admin',
+            isActive: (loc) => loc.pathname === '/admin' && !new URLSearchParams(loc.search).get('tab'),
+          },
+          {
+            icon: Users,
+            label: 'Users',
+            path: '/admin?tab=users',
+            isActive: (loc) => loc.pathname === '/admin' && new URLSearchParams(loc.search).get('tab') === 'users',
+          },
+          {
+            icon: User,
+            label: 'Pending Doctors',
+            path: '/admin?tab=pending',
+            isActive: (loc) => loc.pathname === '/admin' && new URLSearchParams(loc.search).get('tab') === 'pending',
+          },
         ];
       default:
         return [];
@@ -53,8 +68,15 @@ const Layout = ({ children }) => {
 
   const navItems = getNavItems();
 
+  const isNavItemActive = (item) => {
+    if (typeof item.isActive === 'function') {
+      return item.isActive(location);
+    }
+    return location.pathname === item.path;
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/20 to-indigo-50/20">
+    <div className="min-h-screen bg-linear-to-br from-slate-50 via-blue-50/20 to-indigo-50/20">
       {/* Header */}
       <motion.header
         initial={{ y: -100 }}
@@ -68,7 +90,7 @@ const Layout = ({ children }) => {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30"
+                className="w-10 h-10 bg-linear-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30"
               >
                 <Stethoscope className="w-5 h-5 text-white" />
               </motion.div>
@@ -84,7 +106,7 @@ const Layout = ({ children }) => {
                   key={item.label}
                   to={item.path}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                    location.pathname === item.path
+                    isNavItemActive(item)
                       ? 'bg-blue-50 text-blue-600'
                       : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
                   }`}
@@ -138,7 +160,7 @@ const Layout = ({ children }) => {
                     to={item.path}
                     onClick={() => setMobileMenuOpen(false)}
                     className={`flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
-                      location.pathname === item.path
+                      isNavItemActive(item)
                         ? 'bg-blue-50 text-blue-600'
                         : 'text-gray-600 hover:bg-gray-50'
                     }`}
