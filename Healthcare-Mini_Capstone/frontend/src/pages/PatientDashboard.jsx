@@ -94,7 +94,7 @@ const PatientDashboard = () => {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             onClick={() => setShowBooking(true)}
-            className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl font-semibold shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30 transition-all"
+            className="flex items-center gap-2 px-6 py-3 bg-linear-to-r from-blue-600 to-indigo-600 text-white rounded-xl font-semibold shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30 transition-all"
           >
             <Plus className="w-5 h-5" />
             Book Appointment
@@ -143,7 +143,7 @@ const PatientDashboard = () => {
           animate={{ opacity: 1, y: 0 }}
           className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden"
         >
-          <div className="p-6 border-b border-gray-100 bg-gradient-to-r from-blue-50 to-transparent">
+          <div className="p-6 border-b border-gray-100 bg-linear-to-r from-blue-50 to-transparent">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
@@ -185,7 +185,7 @@ const PatientDashboard = () => {
                     className="appointment-card"
                   >
                     <div className="flex items-start gap-4">
-                      <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex flex-col items-center justify-center text-white flex-shrink-0 shadow-md">
+                      <div className="w-14 h-14 bg-linear-to-br from-blue-500 to-indigo-600 rounded-xl flex flex-col items-center justify-center text-white shrink-0 shadow-md">
                         <span className="text-lg font-bold leading-none">
                           {format(new Date(apt.appointment_time), 'd')}
                         </span>
@@ -228,7 +228,7 @@ const PatientDashboard = () => {
           transition={{ delay: 0.1 }}
           className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden"
         >
-          <div className="p-6 border-b border-gray-100 bg-gradient-to-r from-green-50 to-transparent">
+          <div className="p-6 border-b border-gray-100 bg-linear-to-r from-green-50 to-transparent">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
@@ -276,7 +276,7 @@ const PatientDashboard = () => {
                     <div className="space-y-2">
                       {presc.medicines?.slice(0, 3).map((med, idx) => (
                         <div key={`med-${presc.id || presc._id || index}-${idx}`} className="flex items-center gap-3 text-sm bg-white p-2 rounded-lg border border-gray-100">
-                          <span className="w-2 h-2 bg-green-400 rounded-full flex-shrink-0"></span>
+                          <span className="w-2 h-2 bg-green-400 rounded-full shrink-0"></span>
                           <span className="font-medium text-gray-700 flex-1">{med.name}</span>
                           <span className="text-gray-500 text-xs">{med.dosage}</span>
                         </div>
@@ -370,7 +370,7 @@ const PatientDashboard = () => {
                   </button>
                   <button
                     type="submit"
-                    className="flex-1 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl hover:shadow-lg hover:shadow-blue-500/25 transition-all font-semibold"
+                    className="flex-1 py-3 bg-linear-to-r from-blue-600 to-indigo-600 text-white rounded-xl hover:shadow-lg hover:shadow-blue-500/25 transition-all font-semibold"
                   >
                     Book Appointment
                   </button>

@@ -93,7 +93,7 @@ const PatientAppointments = () => {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             onClick={() => setShowBooking(true)}
-            className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl font-semibold shadow-lg shadow-blue-500/25 hover:shadow-xl transition-all"
+            className="flex items-center gap-2 px-6 py-3 bg-linear-to-r from-blue-600 to-indigo-600 text-white rounded-xl font-semibold shadow-lg shadow-blue-500/25 hover:shadow-xl transition-all"
           >
             <Plus className="w-5 h-5" />
             Book Appointment
@@ -111,7 +111,7 @@ const PatientAppointments = () => {
             onClick={() => setFilter(stat.status)}
             className={`px-5 py-3 rounded-xl font-medium transition-all ${
               filter === stat.status
-                ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg shadow-blue-500/25'
+                ? 'bg-linear-to-r from-blue-600 to-indigo-600 text-white shadow-lg shadow-blue-500/25'
                 : 'bg-white text-gray-700 border border-gray-200 hover:border-gray-300'
             }`}
           >
@@ -172,7 +172,7 @@ const PatientAppointments = () => {
             >
               <div className="flex flex-col md:flex-row md:items-center gap-4">
                 {/* Date Badge */}
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex flex-col items-center justify-center text-white flex-shrink-0 shadow-md">
+                <div className="w-16 h-16 bg-linear-to-br from-blue-500 to-indigo-600 rounded-xl flex flex-col items-center justify-center text-white shrink-0 shadow-md">
                   <span className="text-xl font-bold leading-none">
                     {format(new Date(apt.appointment_time), 'd')}
                   </span>
@@ -286,7 +286,7 @@ const PatientAppointments = () => {
                   </button>
                   <button
                     type="submit"
-                    className="flex-1 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl hover:shadow-lg hover:shadow-blue-500/25 transition-all font-semibold"
+                    className="flex-1 py-3 bg-linear-to-r from-blue-600 to-indigo-600 text-white rounded-xl hover:shadow-lg hover:shadow-blue-500/25 transition-all font-semibold"
                   >
                     Book Appointment
                   </button>

@@ -85,7 +85,7 @@ const DoctorAppointments = () => {
             onClick={() => setFilter(stat.status)}
             className={`px-5 py-3 rounded-xl font-medium transition-all ${
               filter === stat.status
-                ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg shadow-blue-500/25'
+                ? 'bg-linear-to-r from-blue-600 to-indigo-600 text-white shadow-lg shadow-blue-500/25'
                 : 'bg-white text-gray-700 border border-gray-200 hover:border-gray-300'
             }`}
           >
@@ -138,7 +138,7 @@ const DoctorAppointments = () => {
             >
               <div className="flex flex-col lg:flex-row lg:items-center gap-4">
                 {/* Date Badge */}
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex flex-col items-center justify-center text-white flex-shrink-0 shadow-md">
+                <div className="w-16 h-16 bg-linear-to-br from-blue-500 to-indigo-600 rounded-xl flex flex-col items-center justify-center text-white shrink-0 shadow-md">
                   <span className="text-xl font-bold leading-none">
                     {format(new Date(apt.appointment_time), 'd')}
                   </span>

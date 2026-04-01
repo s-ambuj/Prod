@@ -109,7 +109,7 @@ const PatientPrescriptions = () => {
               >
                 <div className="flex flex-col md:flex-row md:items-center gap-4">
                   {/* Icon */}
-                  <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center text-white flex-shrink-0 shadow-md">
+                  <div className="w-14 h-14 bg-linear-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center text-white shrink-0 shadow-md">
                     <Pill className="w-7 h-7" />
                   </div>
 
@@ -153,7 +153,7 @@ const PatientPrescriptions = () => {
                       >
                         <div className="flex items-start justify-between">
                           <div className="flex items-start gap-3">
-                            <span className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <span className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
                               <span className="text-green-600 font-semibold text-sm">{idx + 1}</span>
                             </span>
                             <div>

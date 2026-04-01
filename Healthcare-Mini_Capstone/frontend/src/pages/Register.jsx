@@ -44,7 +44,7 @@ const Register = () => {
   return (
     <div className="min-h-screen flex">
       {/* Left Side - Benefits */}
-      <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-violet-600 via-indigo-600 to-blue-600 relative overflow-hidden">
+      <div className="hidden lg:flex lg:w-1/2 bg-linear-to-br from-violet-600 via-indigo-600 to-blue-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-black/10" />
         
         <motion.div
@@ -93,7 +93,7 @@ const Register = () => {
       </div>
 
       {/* Right Side - Register Form */}
-      <div className="flex-1 flex items-center justify-center p-8 bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/30">
+      <div className="flex-1 flex items-center justify-center p-8 bg-linear-to-br from-slate-50 via-blue-50/30 to-indigo-50/30">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

@@ -93,7 +93,7 @@ const DoctorDashboard = () => {
   return (
     <div className="min-h-screen pb-24">
       {/* Header Section */}
-      <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 text-white">
+      <div className="bg-linear-to-r from-blue-600 via-indigo-600 to-violet-600 text-white">
         <div className="max-w-7xl mx-auto px-6 py-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -163,7 +163,7 @@ const DoctorDashboard = () => {
             animate={{ opacity: 1, y: 0 }}
             className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden"
           >
-            <div className="p-6 border-b border-gray-100 bg-gradient-to-r from-blue-50 to-transparent">
+            <div className="p-6 border-b border-gray-100 bg-linear-to-r from-blue-50 to-transparent">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
@@ -261,7 +261,7 @@ const DoctorDashboard = () => {
             transition={{ delay: 0.1 }}
             className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden"
           >
-            <div className="p-6 border-b border-gray-100 bg-gradient-to-r from-green-50 to-transparent">
+            <div className="p-6 border-b border-gray-100 bg-linear-to-r from-green-50 to-transparent">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
@@ -308,7 +308,7 @@ const DoctorDashboard = () => {
                       <div className="space-y-2">
                         {presc.medicines?.slice(0, 3).map((med, idx) => (
                           <div key={`med-${presc.id || presc._id || index}-${idx}`} className="flex items-center gap-3 text-sm bg-white p-2 rounded-lg border border-gray-100">
-                            <span className="w-2 h-2 bg-green-400 rounded-full flex-shrink-0"></span>
+                            <span className="w-2 h-2 bg-green-400 rounded-full shrink-0"></span>
                             <span className="font-medium text-gray-700 flex-1">{med.name}</span>
                             <span className="text-gray-500 text-xs">{med.dosage}</span>
                           </div>
@@ -393,7 +393,7 @@ const DoctorDashboard = () => {
                   </button>
                   <button
                     type="submit"
-                    className="flex-1 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-xl hover:shadow-lg hover:shadow-green-500/25 transition-all font-semibold"
+                    className="flex-1 py-3 bg-linear-to-r from-green-600 to-emerald-600 text-white rounded-xl hover:shadow-lg hover:shadow-green-500/25 transition-all font-semibold"
                   >
                     Create Prescription
                   </button>

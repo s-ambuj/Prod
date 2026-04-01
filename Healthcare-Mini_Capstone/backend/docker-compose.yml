@@ -9,10 +9,8 @@ services:
       - MONGODB_URL=mongodb://mongo:27017
       - DATABASE_NAME=healthcare_db
       - SECRET_KEY=healthcare
-      - REDIS_URL=redis://redis:6379/0
     depends_on:
       - mongo
-      - redis
     volumes:
       - .:/app
     command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
