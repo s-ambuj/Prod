@@ -67,7 +67,7 @@ const Register = () => {
               Back to login
             </Link>
 
-            <h2 className="text-4xl font-bold mb-6">Join HealthCare Today</h2>
+            <h2 className="text-4xl font-bold mb-6">Join Medconnect Today</h2>
             <p className="text-xl text-indigo-100 mb-12 max-w-md leading-relaxed">
               Create your account and start managing your healthcare journey with ease.
             </p>

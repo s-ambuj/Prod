@@ -95,7 +95,7 @@ const Layout = ({ children }) => {
                 <Stethoscope className="w-5 h-5 text-white" />
               </motion.div>
               <span className="text-xl font-bold gradient-text hidden sm:block">
-                HealthCare
+                Medconnect
               </span>
             </Link>
 

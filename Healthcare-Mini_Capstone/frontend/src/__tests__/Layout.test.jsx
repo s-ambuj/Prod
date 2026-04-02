@@ -19,7 +19,7 @@ describe('Layout Component', () => {
     expect(screen.getByText('Test Content')).toBeInTheDocument();
   });
 
-  it('renders HealthCare header', () => {
+  it('renders Medconnect header', () => {
     render(
       <BrowserRouter>
         <Layout>
@@ -27,6 +27,6 @@ describe('Layout Component', () => {
         </Layout>
       </BrowserRouter>
     );
-    expect(screen.getByText('HealthCare')).toBeInTheDocument();
+    expect(screen.getByText('Medconnect')).toBeInTheDocument();
   });
 });

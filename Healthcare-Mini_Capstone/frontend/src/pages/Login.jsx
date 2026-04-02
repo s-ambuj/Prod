@@ -66,7 +66,7 @@ const Login = () => {
               <div className="w-16 h-16 bg-white/20 backdrop-blur-lg rounded-2xl flex items-center justify-center">
                 <Stethoscope className="w-8 h-8" />
               </div>
-              <h1 className="text-4xl font-bold">HealthCare</h1>
+              <h1 className="text-4xl font-bold">Medconnect</h1>
             </div>
             
             <p className="text-xl text-blue-100 mb-12 max-w-md leading-relaxed">
@@ -106,7 +106,7 @@ const Login = () => {
             <div className="w-12 h-12 bg-linear-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
               <Stethoscope className="w-6 h-6 text-white" />
             </div>
-            <span className="text-2xl font-bold gradient-text">HealthCare</span>
+            <span className="text-2xl font-bold gradient-text">Medconnect</span>
           </div>
 
           <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl shadow-blue-500/10 p-8 border border-white/50">
