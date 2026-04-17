@@ -1,0 +1,35 @@
+:root {
+  --ink: #1e2c2f;
+  --muted: #55666c;
+  --bg: #f4efe8;
+  --card: #fffefc;
+  --line: #d8d2c8;
+  --font-body: "Source Sans 3", "Segoe UI", Tahoma, sans-serif;
+  --font-heading: "Merriweather", Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 20% 10%, rgba(240, 176, 117, 0.27), transparent 40%),
+    radial-gradient(circle at 80% 0%, rgba(112, 189, 201, 0.2), transparent 38%),
+    var(--bg);
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #132125;
+}
